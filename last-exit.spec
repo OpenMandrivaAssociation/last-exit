@@ -1,24 +1,26 @@
 %define name last-exit
-%define version 4
+%define version 5
 %define release %mkrel 1
 
 Summary: Last.fm web radio player
 Name: %{name}
 Version: %{version}
 Release: %{release}
-Source0: http://www.o-hand.com/~iain/last-exit/%{name}-%{version}.tar.bz2
+Source0: http://lastexit-player.org/releases/%{name}-%{version}.tar.bz2
 License: GPL
 Group: Sound
-Url: http://www.o-hand.com/~iain/last-exit/
+Url: http://lastexit-player.org/index.php/Main_Page
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires: gnome-sharp2 mono-devel
 BuildRequires: libgstreamer-plugins-base-devel
 BuildRequires: libGConf2-devel
-BuildRequires: gtk+2-devel
+BuildRequires: libsexy-devel
 BuildRequires: perl-XML-Parser
 BuildRequires: dbus-glib-devel
+BuildRequires: perl-XML-Parser
 BuildRequires: desktop-file-utils
 Requires: mono
+Requires: gstreamer0.10-plugins-good gstreamer0.10-plugins-ugly
 
 %description
 This is a radio player program for last.fm with a GNOME user interface.
@@ -40,6 +42,8 @@ desktop-file-install --vendor="" \
   --dir $RPM_BUILD_ROOT%{_datadir}/applications $RPM_BUILD_ROOT%{_datadir}/applications/*
 rm -f %buildroot%_libdir/%name/*a
 
+%find_lang %name
+
 %post
 %update_icon_cache hicolor
 %define schemas last-exit lastfm
@@ -54,7 +58,7 @@ rm -f %buildroot%_libdir/%name/*a
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%files
+%files -f %name.lang
 %defattr(-,root,root)
 %doc README AUTHORS
 %_bindir/%name
