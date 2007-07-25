@@ -1,12 +1,13 @@
 %define name last-exit
 %define version 5
-%define release %mkrel 1
+%define release %mkrel 2
 
 Summary: Last.fm web radio player
 Name: %{name}
 Version: %{version}
 Release: %{release}
 Source0: http://lastexit-player.org/releases/%{name}-%{version}.tar.bz2
+Patch: last-exit-5-dllmap.patch
 License: GPL
 Group: Sound
 Url: http://lastexit-player.org/index.php/Main_Page
@@ -27,6 +28,7 @@ This is a radio player program for last.fm with a GNOME user interface.
 
 %prep
 %setup -q
+%patch -p1
 
 %build
 %configure2_5x
