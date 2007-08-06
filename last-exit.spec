@@ -1,6 +1,6 @@
 %define name last-exit
 %define version 5
-%define release %mkrel 2
+%define release %mkrel 3
 
 Summary: Last.fm web radio player
 Name: %{name}
@@ -17,7 +17,7 @@ BuildRequires: libgstreamer-plugins-base-devel
 BuildRequires: libGConf2-devel
 BuildRequires: libsexy-devel
 BuildRequires: perl-XML-Parser
-BuildRequires: dbus-glib-devel
+BuildRequires: ndesk-dbus-glib
 BuildRequires: perl-XML-Parser
 BuildRequires: desktop-file-utils
 Requires: mono
