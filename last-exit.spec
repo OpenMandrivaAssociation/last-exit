@@ -18,6 +18,7 @@ BuildRequires: libGConf2-devel
 BuildRequires: libsexy-devel
 BuildRequires: perl-XML-Parser
 BuildRequires: ndesk-dbus-glib
+BuildRequires: dbus-glib-devel
 BuildRequires: perl-XML-Parser
 BuildRequires: desktop-file-utils
 Requires: mono
