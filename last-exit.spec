@@ -11,7 +11,6 @@ Patch: last-exit-5-dllmap.patch
 License: GPL
 Group: Sound
 Url: http://lastexit-player.org/index.php/Main_Page
-BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires: gnome-sharp2 mono-devel
 BuildRequires: libgstreamer-plugins-base-devel
 BuildRequires: libGConf2-devel
