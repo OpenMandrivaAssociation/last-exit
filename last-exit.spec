@@ -1,18 +1,17 @@
 %define name last-exit
-%define version 5
-%define release %mkrel 3
+%define version 6
+%define release %mkrel 1
 
 Summary: Last.fm web radio player
 Name: %{name}
 Version: %{version}
 Release: %{release}
 Source0: http://lastexit-player.org/releases/%{name}-%{version}.tar.bz2
-Patch: last-exit-5-dllmap.patch
 License: GPL
 Group: Sound
 Url: http://lastexit-player.org/index.php/Main_Page
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
-BuildRequires: gnome-sharp2 mono-devel
+BuildRequires: gnome-sharp2-devel mono-devel
 BuildRequires: libgstreamer-plugins-base-devel
 BuildRequires: libGConf2-devel
 BuildRequires: libsexy-devel
@@ -29,7 +28,7 @@ This is a radio player program for last.fm with a GNOME user interface.
 
 %prep
 %setup -q
-%patch -p1
+
 
 %build
 %configure2_5x
@@ -68,7 +67,7 @@ rm -rf $RPM_BUILD_ROOT
 %_datadir/applications/%name.desktop
 %_libdir/%name
 %_datadir/icons/hicolor/*/apps/*
-%_datadir/icons/hicolor/*/actions/*
+%_datadir/%name
 %_sysconfdir/gconf/schemas/last-exit.schemas
 %_sysconfdir/gconf/schemas/lastfm.schemas
 
