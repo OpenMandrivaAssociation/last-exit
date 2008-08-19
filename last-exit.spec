@@ -7,7 +7,7 @@ Name: %{name}
 Version: %{version}
 Release: %{release}
 Source0: http://lastexit-player.org/releases/%{name}-%{version}.tar.bz2
-License: GPL
+License: GPLv2+
 Group: Sound
 Url: http://lastexit-player.org/index.php/Main_Page
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
