@@ -15,8 +15,7 @@ BuildRequires: gnome-sharp2-devel mono-devel
 BuildRequires: libgstreamer-plugins-base-devel
 BuildRequires: libGConf2-devel
 BuildRequires: libsexy-devel
-BuildRequires: perl-XML-Parser
-BuildRequires: ndesk-dbus-glib
+BuildRequires: ndesk-dbus-glib-devel
 BuildRequires: dbus-glib-devel
 BuildRequires: intltool
 BuildRequires: desktop-file-utils
