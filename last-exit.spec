@@ -9,7 +9,7 @@ Release: %{release}
 Source0: http://lastexit-player.org/releases/%{name}-%{version}.tar.bz2
 License: GPLv2+
 Group: Sound
-Url: http://lastexit-player.org/index.php/Main_Page
+Url: https://lastexit-player.org/index.php/Main_Page
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires: gnome-sharp2-devel mono-devel
 BuildRequires: libgstreamer-plugins-base-devel
