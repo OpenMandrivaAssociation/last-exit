@@ -11,6 +11,11 @@ License: GPLv2+
 Group: Sound
 Url: https://lastexit-player.org/index.php/Main_Page
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires: gnome-sharp2-devel mono-devel
 BuildRequires: libgstreamer-plugins-base-devel
 BuildRequires: libGConf2-devel
