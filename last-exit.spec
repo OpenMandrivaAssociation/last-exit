@@ -1,6 +1,6 @@
 %define name last-exit
 %define version 6
-%define release %mkrel 4
+%define release 5
 
 Summary: Last.fm web radio player
 Name: %{name}
